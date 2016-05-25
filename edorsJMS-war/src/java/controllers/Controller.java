@@ -5,6 +5,8 @@
  */
 package controllers;
 
+import JMSproducers.producerClassLocal;
+import javax.ejb.EJB;
 import javax.inject.Named;
 import javax.enterprise.context.Dependent;
 
@@ -16,14 +18,21 @@ import javax.enterprise.context.Dependent;
 @Dependent
 public class Controller {
 
+    @EJB
+    private producerClassLocal producerClass;
+
     /**
      * Creates a new instance of Controller
      */
     public Controller() {
     }
     
+    public void aSync(){
+        producerClass.sendMessageToQueue("async message");
+        
+    }
     
-    public void myMethod(){
+    public void syncronous(){
         System.out.println("whatever");
     }
     

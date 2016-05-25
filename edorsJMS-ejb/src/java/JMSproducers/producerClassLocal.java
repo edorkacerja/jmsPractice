@@ -14,4 +14,5 @@ import javax.ejb.Local;
 @Local
 public interface producerClassLocal {
     
+    public void sendMessageToQueue(String message);
 }
