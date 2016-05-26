@@ -16,6 +16,7 @@ import javax.jms.Queue;
 @Stateless
 public class producerClass implements producerClassLocal {
 
+    
     @Resource(mappedName = "jms/edorsDJMDI")
     private Queue edorsDJMDI;
 

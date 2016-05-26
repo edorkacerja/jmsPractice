@@ -18,9 +18,11 @@ import javax.enterprise.context.Dependent;
 @Dependent
 public class Controller {
 
-    @EJB
-    private producerClassLocal producerClass;
+//    @EJB
+//    private producerClassLocal producerClass;
 
+    
+    
     /**
      * Creates a new instance of Controller
      */
@@ -28,7 +30,7 @@ public class Controller {
     }
     
     public void aSync(){
-        producerClass.sendMessageToQueue("async message");
+        
         
     }
     
